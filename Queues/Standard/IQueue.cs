@@ -8,11 +8,11 @@ namespace DataStructures
 {
     interface IQueue<T>
     {
-        void enQueue(T item);
-        T deQueue();
+        void EnQueue(T item);
+        T DeQueue();
 
-        bool isFull { get; }
-        bool isEmpty { get; }
+        bool IsFull { get; }
+        bool IsEmpty { get; }
 
         int Count { get; }
     }
