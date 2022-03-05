@@ -1,70 +1,14 @@
-﻿using System;
-
-namespace DataStructures
+﻿namespace DataStructures
 {
-    class Stack<T>
+    abstract class Stack<T>
     {
-        T[] array;
-        int top = -1;
-        int size;
+        protected IList<T> list;
+        protected int length = 0;
 
-        public bool is_empty
-        {
-            get
-            {
-                if (top == -1)
-                {
-                    return true;
-                }
-                return false;
-            }
-        }
+        public abstract bool IsFull { get; }
+        public bool IsEmpty { get { return length == 0; } }
 
-        public bool is_full
-        {
-            get
-            {
-                if (top + 1 == size)
-                {
-                    return true;
-                }
-                return false;
-            }
-        }
-
-        public Stack(int size)
-        {
-            this.size = size;
-            array = new T[size];
-        }
-
-        public void push(T item)
-        {
-            if (is_full)
-            {
-                throw new Exception("Stack is full");
-            }
-
-            array[++top] = item;
-        }
-
-        public T pop()
-        {
-            if (is_empty)
-            {
-                throw new Exception("Stack is empty");
-            }
-
-            return array[top--];
-        }
-
-        internal void debug_display()
-        {
-            foreach (T item in array)
-            {
-                Console.Write(item + ", ");
-            }
-            Console.WriteLine();
-        }
+        public abstract void Push(T item);
+        public abstract T Pop();
     }
 }

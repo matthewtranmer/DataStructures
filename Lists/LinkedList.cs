@@ -107,6 +107,11 @@
 
         private ListElement<T>? GetListElementAtIndex(int index)
         {
+            if(index == length - 1)
+            {
+                return last_element;
+            }
+
             ListElement<T>? temp_element = first_element;
             for (int i = 0; i < index; i++)
             {

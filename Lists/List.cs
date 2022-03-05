@@ -2,7 +2,7 @@
 
 namespace DataStructures
 {
-    abstract class List<T> : IEnumerable<T>
+    abstract class List<T> : IEnumerable<T>, IList<T>
     {
         protected int length = 0;
 
@@ -47,5 +47,16 @@ namespace DataStructures
         public abstract void RemoveAt(int index);
         public abstract void Insert(int index, T item);
         public abstract void Clear();
+
+        //Not Implemented
+        public bool IsReadOnly { get => throw new NotImplementedException(); }
+        //Not Implemented
+        public int IndexOf(T _) => throw new NotImplementedException();
+        //Not Implemented
+        public bool Contains(T _) => throw new NotImplementedException();
+        //Not Implemented
+        public void CopyTo(T[] _, int __) => throw new NotImplementedException();
+        //Not Implemented
+        public bool Remove(T _) => throw new NotImplementedException();
     }
 }

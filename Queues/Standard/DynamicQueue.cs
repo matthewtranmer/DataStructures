@@ -5,7 +5,7 @@
         LinkedList<T> list;
 
         public override bool IsEmpty { get { return length == 0; } }
-        public override bool IsFull{ get { throw new NotImplementedException(); } }
+        public override bool IsFull{ get { return false; } }
 
         public DynamicQueue()
         {

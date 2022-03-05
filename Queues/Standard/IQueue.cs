@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataStructures
 {
-    interface IQueue<T>
+    public interface IQueue<T>
     {
         void EnQueue(T item);
         T DeQueue();

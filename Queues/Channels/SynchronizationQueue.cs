@@ -1,41 +1,15 @@
 ﻿namespace DataStructures
 {
-    /*
-    class SynchronizationQueue<T> : ISyncQueue<T>
+    class SynchronizationQueue<T> : SyncQueue<T>
     {
-        SemaphoreSlim gate;
-        CircularQueue<T> queue;
-        int size;
+        int queue_size;
+        public override bool IsFull { get { return queue.Count == queue_size; } }
 
-        public int items { get { return queue.items; } }
-
-        public SynchronizationQueue(int size)
+        public SynchronizationQueue(int queue_size)
         {
-            this.size = size;
-            gate = new SemaphoreSlim(0, size);
-            queue = new CircularQueue<T>(size);
-        }
-
-        public bool isFull()
-        {
-            if (gate.CurrentCount == size)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        public void enQueue(T item)
-        {
-            gate.Release();
-            queue.enQueue(item);
-        }
-
-        public async Task<T> deQueue()
-        {
-            await gate.WaitAsync();
-            return queue.deQueue();
+            this.queue_size = queue_size;
+            gate = new SemaphoreSlim(0, queue_size);
+            queue = new CircularQueue<T>(queue_size);
         }
     }
-    */
 }

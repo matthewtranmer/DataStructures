@@ -53,17 +53,18 @@ namespace DataStructures
         public override T DeQueue()
         {
             T item = array[front];
+
             if (front == back)
             {
                 front = -1;
                 back = -1;
-
-                return item;
+            }
+            else
+            {
+                front = ++front % array_size;
             }
 
-            front = ++front % array_size;
             length--;
-
             return item;
         }
     }

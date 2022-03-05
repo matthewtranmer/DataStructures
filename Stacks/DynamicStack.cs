@@ -2,30 +2,28 @@
 
 namespace DataStructures
 {
-    /*
-    class DynamicStack<T>
+    class DynamicStack<T> : Stack<T>
     {
-        int top = -1;
-        DynamicList<T> list = new DynamicList<T>();
+        public override bool IsFull { get { return false; } }
 
-        public bool is_empty
+        public override void Push(T item)
         {
-            get
-            {
-                return list.Count == 0;
-            }
+            list.Add(item);
+            length++;
         }
 
-        public void push(T item)
+        public override T Pop()
         {
-            top++;
-            list.Append(item);
+            T item = list[list.Count - 1];
+            list.RemoveAt(list.Count - 1);
+            length--;
+
+            return item;
         }
 
-        public T pop()
+        public DynamicStack()
         {
-            return list.RemoveAt(top--);
+            list = new LinkedList<T>();
         }
     }
-    */
 }

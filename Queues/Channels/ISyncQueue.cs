@@ -8,12 +8,12 @@ namespace DataStructures
 {
     interface ISyncQueue<T>
     {
-        void enQueue(T item);
-        Task<T> deQueue();
+        void EnQueue(T item);
+        Task<T> DeQueue();
 
-        bool is_full { get; }
-        bool is_empty { get; }
+        bool IsFull { get; }
+        bool IsEmpty { get; }
 
-        int items { get; }
+        int Count { get; }
     }
 }
