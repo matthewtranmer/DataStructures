@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace DataStructures
+namespace DataStructures.Lists
 {
     abstract class List<T> : IEnumerable<T>, IList<T>
     {

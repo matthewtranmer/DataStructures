@@ -1,4 +1,4 @@
-﻿namespace DataStructures
+﻿namespace DataStructures.Lists
 {
     class LinkedList<T> : List<T>
     {

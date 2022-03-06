@@ -1,6 +1,6 @@
-﻿namespace DataStructures
+﻿namespace DataStructures.Stacks
 {
-    abstract class Stack<T>
+    abstract class Stack<T> : IStack<T>
     {
         protected IList<T> list;
         protected int length = 0;

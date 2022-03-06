@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DataStructures
+namespace DataStructures.Queues.Channels
 {
 	public abstract class SyncQueue<T> : ISyncQueue<T>
 	{

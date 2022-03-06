@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DataStructures
+﻿namespace DataStructures.Queues.Standard
 {
 	public abstract class Queue<T> : IQueue<T>
 	{

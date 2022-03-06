@@ -1,4 +1,4 @@
-﻿namespace DataStructures
+﻿namespace DataStructures.Queues.Channels
 {
     class SynchronizationQueue<T> : SyncQueue<T>
     {

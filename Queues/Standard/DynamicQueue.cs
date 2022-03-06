@@ -1,4 +1,4 @@
-﻿namespace DataStructures
+﻿namespace DataStructures.Queues.Standard
 {
     class DynamicQueue<T> : Queue<T>
     {
