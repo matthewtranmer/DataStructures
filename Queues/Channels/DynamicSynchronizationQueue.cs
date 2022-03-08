@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DataStructures.Queues.Standard;
 
-namespace DataStructures.Lists
+namespace DataStructures.Queues.Channels
 {
     class DynamicSynchronizationQueue<T> : SyncQueue<T>
     {

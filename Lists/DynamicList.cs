@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace DataStructures
+﻿namespace DataStructures.Lists
 {
     class DynamicList<T> : List<T>
     {
@@ -21,8 +19,7 @@ namespace DataStructures
             }
         }
 
-
-        public DynamicList(int minimum_size = 1)
+        public DynamicList(int minimum_size = 8)
         {
             this.minimum_size = minimum_size;
             array = new T[minimum_size];
@@ -60,7 +57,7 @@ namespace DataStructures
             length++;
         }
 
-        public bool Remove(T item)
+        public override bool Remove(T item)
         {
             for (int i = length-1; i < length-1; i++)
             {

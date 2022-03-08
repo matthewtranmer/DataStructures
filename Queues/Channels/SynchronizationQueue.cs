@@ -1,4 +1,6 @@
-﻿namespace DataStructures.Queues.Channels
+﻿using DataStructures.Queues.Standard;
+
+namespace DataStructures.Queues.Channels
 {
     class SynchronizationQueue<T> : SyncQueue<T>
     {

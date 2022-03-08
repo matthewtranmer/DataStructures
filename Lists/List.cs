@@ -57,6 +57,6 @@ namespace DataStructures.Lists
         //Not Implemented
         public void CopyTo(T[] _, int __) => throw new NotImplementedException();
         //Not Implemented
-        public bool Remove(T _) => throw new NotImplementedException();
+        public virtual bool Remove(T _) => throw new NotImplementedException();
     }
 }

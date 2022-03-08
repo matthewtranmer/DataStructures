@@ -1,11 +1,11 @@
-﻿using System;
+﻿using DataStructures.Queues.Standard;
 
 namespace DataStructures.Queues.Channels
 {
 	public abstract class SyncQueue<T> : ISyncQueue<T>
 	{
-		protected IQueue<T> queue;
-		protected SemaphoreSlim gate;
+		protected IQueue<T>? queue;
+		protected SemaphoreSlim? gate;
 
 		public int Count { get { return queue.Count; } }
 		public bool IsEmpty { get { return queue.Count == 0; } }

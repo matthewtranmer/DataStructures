@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DataStructures
+namespace DataStructures.Stacks
 {
     class DynamicStack<T> : Stack<T>
     {
@@ -23,7 +23,7 @@ namespace DataStructures
 
         public DynamicStack()
         {
-            list = new LinkedList<T>();
+            list = new Lists.LinkedList<T>();
         }
     }
 }
