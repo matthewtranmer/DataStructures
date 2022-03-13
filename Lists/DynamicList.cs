@@ -75,7 +75,7 @@
         {
             ValidateIndex(index);
 
-            for (int i = index; i < index; i++)
+            for (int i = index; i < length; i++)
             {
                 array[i] = array[i + 1];
             }
@@ -97,15 +97,21 @@
 
         public override void Insert(int index, T item)
         {
-            ValidateIndex(index);
-
-            for (int i = index+1; i < index-1; i++)
+            if (index == length)
             {
-                array[i] = array[i + 1];
+                Add(item);
             }
 
+            ValidateIndex(index);
+
+            T last = array[length-1];
+            for (int i = length-1; i > index; i--)
+            {
+                array[i] = array[i-1];
+            }
+
+            Add(last);
             array[index] = item;
-            Add(array[length - 1]);
         }
     }
 }
