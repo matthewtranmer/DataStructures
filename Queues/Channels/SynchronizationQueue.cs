@@ -10,7 +10,7 @@ namespace DataStructures.Queues.Channels
         public SynchronizationQueue(int queue_size)
         {
             this.queue_size = queue_size;
-            gate = new SemaphoreSlim(0, queue_size);
+            gate = new SemaphoreSlim(0);
             queue = new CircularQueue<T>(queue_size);
         }
     }

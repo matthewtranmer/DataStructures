@@ -5,7 +5,7 @@ namespace DataStructures.Queues.Channels
 	public abstract class SyncQueue<T> : ISyncQueue<T>
 	{
 		protected IQueue<T>? queue;
-		protected SemaphoreSlim? gate;
+		public SemaphoreSlim? gate;
 
 		public int Count { get { return queue.Count; } }
 		public bool IsEmpty { get { return queue.Count == 0; } }
@@ -13,8 +13,8 @@ namespace DataStructures.Queues.Channels
 
 		public void EnQueue(T item)
 		{
-			gate.Release();
 			queue.EnQueue(item);
+			gate.Release();
 		}
 
 		public async Task<T> DeQueue()
